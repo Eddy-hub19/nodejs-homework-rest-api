@@ -6,8 +6,6 @@ const contacts = require("../../models/db/contacts.js")
 
 const { HttpError } = require("../../helpers")
 
-const contacts = require('../../models/contacts')
-
 const router = express.Router()
 
 const addShema = Joi.object({
