@@ -16,8 +16,8 @@ router.post("/", validateBody(shemas.addShema), ctrl.add)
 
 router.put("/:id", isValidId, validateBody(shemas.addShema), ctrl.updateById)
 
-router.delete("/:id", isValidId, ctrl.deleteById)
-
 router.patch("/:id/favorite", isValidId, validateBody(shemas.updateFavoriteShema), ctrl.updateFavorite)
+
+router.delete("/:id", isValidId, ctrl.deleteById)
 
 module.exports = router
