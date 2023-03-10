@@ -11,6 +11,7 @@ mongoose
     .then(() => {
         app.listen(PORT)
     })
+    .then(() => console.log("Database connect success"))
     .catch((error) => {
         console.log(error.message)
         process.exit(1)
