@@ -6,11 +6,11 @@ const { ctrlWrapper } = require("./ctrlWrapper.js")
 const getAll = async (req, res) => {
     const result = await Contact.find()
     res.json(result)
-    console.log(result)
+    console.log(res.json(result));
 }
 
 // const getById = async (req, res) => {
-//     const { id } = req.params
+//     const { contactId } = req.params;
 //     const result = await contacts.getContactById(id)
 //     res.json(result)
 // }
@@ -21,7 +21,7 @@ const add = async (req, res) => {
 }
 
 // const updateById = async (req, res) => {
-//     const { id } = req.params
+//     const { contactId } = req.params;
 //     const result = await contacts.updateContact(id)
 //     if (!result) {
 //         throw HttpError(404, "Not found")
@@ -32,7 +32,7 @@ const add = async (req, res) => {
 // }
 
 // const deleteById = async (req, res) => {
-//     const { id } = req.params
+//     const { contactId } = req.params;
 //     const result = await contacts.removeContact(id, req.body)
 //     if (!result) {
 //         throw HttpError(404, "Not found")
@@ -43,7 +43,7 @@ const add = async (req, res) => {
 // }
 
 // const updateStatusContact(coontactId, body) {
-//     const { id } = req.params
+//     const { contactId } = req.params;
 //         const result = await contacts.removeContact(id, req.body)
 //         if (!result) {
 //             throw HttpError(404, "Not found")
