@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose")
 const Joi = require("joi")
 
-const { handleMongooseError } = require("../helpers")
+const { handleMongooseError} = require("../helpers")
 
 const phoneRegexp = /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/
 
@@ -27,7 +27,9 @@ const contactShema = new Schema(
     { versionKey: false, timestamps: true }
 )
 
-contactShema.post("save", handleMongooseError)
+contactShema.post("save", handleMongooseError, (data)=> {
+    console.log('hello', data);
+})
 
 const addShema = Joi.object({
     name: Joi.string().pattern(nameRegexp).min(3).max(30).required(),
