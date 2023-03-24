@@ -1,7 +1,7 @@
 const { HttpError, sendEmail } = require("../../helpers")
 const { User } = require("../../models/user")
 
-const { BASE_URL } = process.end
+const { BASE_URL } = process.env
 
 const resendVerifyEmail = async (req, res) => {
     const { email } = req.body
